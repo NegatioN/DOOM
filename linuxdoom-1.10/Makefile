@@ -6,8 +6,8 @@
 #
 CC=  gcc  # gcc or g++
 
-CFLAGS=-g -Wall -DNORMALUNIX -DLINUX # -DUSEASM 
-LDFLAGS=-L/usr/X11R6/lib
+CFLAGS=-g -Wall -DNORMALUNIX -DLINUX -m32 # -DUSEASM
+LDFLAGS=-L/usr/lib/i386-linux-gnu/
 LIBS=-lXext -lX11 -lnsl -lm
 
 # subdirectory for objects
