@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 mkdir linux
-sudo apt-get install libxext-dev:i386 -y
+sudo apt-get install libx11-dev:i386 libxext-dev:i386 -y
 make
 
 # You need to copy a doom1.wad file into your linx/-folder. case sensitive.
