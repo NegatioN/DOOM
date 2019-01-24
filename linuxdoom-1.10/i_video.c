@@ -87,7 +87,7 @@ int		doPointerWarp = POINTER_WARP_COUNTDOWN;
 // replace each 320x200 pixel with multiply*multiply pixels.
 // According to Dave Taylor, it still is a bonehead thing
 // to use ....
-static int	multiply=3;
+static int	multiply=1;
 
 
 //
@@ -101,10 +101,18 @@ int xlatekey(void)
 
     switch(rc = XKeycodeToKeysym(X_display, X_event.xkey.keycode, 0))
     {
-      case XK_Left:	rc = KEY_LEFTARROW;	break;
-      case XK_Right:	rc = KEY_RIGHTARROW;	break;
-      case XK_Down:	rc = KEY_DOWNARROW;	break;
-      case XK_Up:	rc = KEY_UPARROW;	break;
+      case XK_Left:
+      //case XK_a:
+      rc = KEY_LEFTARROW;	break;
+      case XK_Right:
+      //case XK_d:
+      rc = KEY_RIGHTARROW;	break;
+      case XK_Down:
+      case XK_s:
+      rc = KEY_DOWNARROW;	break;
+      case XK_Up:
+      case XK_w:
+      rc = KEY_UPARROW;	break;
       case XK_Escape:	rc = KEY_ESCAPE;	break;
       case XK_Return:	rc = KEY_ENTER;		break;
       case XK_Tab:	rc = KEY_TAB;		break;
