@@ -4,7 +4,7 @@ cd linuxdoom-1.10
 mkdir linux
 sudo make -j 4
 cd ../sndserv
-ln -sf linuxdoom-1.10/linux/ linux
+ln -sf ../linuxdoom-1.10/linux linux
 sudo make -j 4
 
 # You need to copy a doom1.wad file into your linx/-folder. case sensitive.
